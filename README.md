@@ -27,4 +27,4 @@ crea tres servicios
 
 Demo en aws con rds mysql y Elastic Beanstalk
 
-http://apidemoaws.us-east-2.elasticbeanstalk.com/
+http://3.88.55.138:5000/api/franquicias/
