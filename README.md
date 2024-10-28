@@ -1,8 +1,8 @@
-#Demo prueba tecnica
+## Demo prueba tecnica
 
-#Api en spring boot (localhost) -  (aws Elastic Beanstalk) y mysql (aws RDS)
+# Api en spring boot (localhost) -  (aws Elastic Beanstalk) y mysql (aws RDS)
 
-#compilar en local
+## compilar en local
 
 En la raiz de el directorio escribe
 
@@ -13,19 +13,19 @@ y luego ejecuta el jar generado
 java -jar /target/app-0.0.1-SNAPSHOT.jar
 
 -----------------------
-#Api en aws: 
+## Api en aws: 
 
 http://54.197.222.16:5000/api
 
-#Api en localhost
+## Api en localhost
 http://localhost:5000/api/
 
 ----------------------
-#Documentacion de la api: 
+## Documentacion de la api: 
 
 http://54.197.222.16:5000/swagger-ui/index.html
 
-#Demo en aws con rds mysql y Elastic Beanstalk
+## Demo en aws con rds mysql y Elastic Beanstalk
 
 http://54.197.222.16:5000/api/franquicias/
  
