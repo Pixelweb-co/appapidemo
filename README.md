@@ -15,15 +15,15 @@ java -jar /target/app-0.0.1-SNAPSHOT.jar
 -----------------------
 Api en aws: 
 
-http://franquiciasdemo.us-east-1.elasticbeanstalk.com/
+http://3.88.55.138:5000/api
 
 Api en localhost
 http://localhost:5000/api/
 
 ----------------------
-Documentacion de la api:
+Documentacion de la api: 
 
-http://localhost:5000/swagger-ui/index.html
+http://3.88.55.138:5000/swagger-ui/index.html
 
 En docker
 
