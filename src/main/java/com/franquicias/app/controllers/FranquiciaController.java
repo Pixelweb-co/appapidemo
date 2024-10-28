@@ -1,5 +1,6 @@
 package com.franquicias.app.controllers;
 
+import com.franquicias.app.dtos.FranquiciaDTO;
 import com.franquicias.app.models.Franquicia;
 import com.franquicias.app.services.FranquiciaService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api/franquicias")
@@ -17,19 +19,25 @@ public class FranquiciaController {
     private FranquiciaService franquiciaService;
 
     @PostMapping("/")
-    public ResponseEntity<Franquicia> addFranquicia(@RequestBody Map<String, String> request) {
-        String nombre = request.get("nombre");
-        return ResponseEntity.ok(franquiciaService.addFranquicia(nombre));
+    public ResponseEntity<Franquicia> addFranquicia(@RequestBody Franquicia franquicia) {
+
+        Franquicia savedfranquicia = franquiciaService.addFranquicia(franquicia);
+        return ResponseEntity.ok(savedfranquicia);
     }
 
     @GetMapping("/")
-    public ResponseEntity<List<Franquicia>> obtenerFranquicias() {
-        try {
-            List<Franquicia> franquicias = franquiciaService.getAllFranquicias();
-            return ResponseEntity.ok(franquicias);
-        } catch (Exception e) {
-            e.printStackTrace();
-            return ResponseEntity.status(500).build();
-        }
+    public ResponseEntity<List<FranquiciaDTO>> obtenerFranquicias() {
+        List<FranquiciaDTO> franquiciasDTO = franquiciaService.getAllFranquicias().stream()
+                .map(this::convertToDTO)
+                .collect(Collectors.toList());
+        return ResponseEntity.ok(franquiciasDTO);
+    }
+
+    private FranquiciaDTO convertToDTO(Franquicia franquicia) {
+        FranquiciaDTO dto = new FranquiciaDTO();
+        dto.setId(franquicia.getId());
+        dto.setNombre(franquicia.getNombre());
+        dto.setSucursales(franquicia.getSucursales());
+        return dto;
     }
 }
