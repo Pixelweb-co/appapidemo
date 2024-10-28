@@ -25,6 +25,6 @@ crea tres servicios
 - springapp (8080)
 
 
-Demo en aws con rds mysql
+Demo en aws con rds mysql y Elastic Beanstalk
 
 http://apidemoaws.us-east-2.elasticbeanstalk.com/
