@@ -20,7 +20,7 @@ public class SucursalController {
     @Autowired
     private SucursalService sucursalService;
 
-    @PostMapping
+    @PostMapping("/")
     public ResponseEntity<Sucursal> addSucursal(@PathVariable Long franquiciaId, @RequestBody SucursalDTO sucursalDTO) {
         String nombre = sucursalDTO.getNombre();
         List<Producto> productos = new ArrayList<>();

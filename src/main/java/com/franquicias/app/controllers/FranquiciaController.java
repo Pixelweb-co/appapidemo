@@ -16,13 +16,13 @@ public class FranquiciaController {
     @Autowired
     private FranquiciaService franquiciaService;
 
-    @PostMapping
+    @PostMapping("/")
     public ResponseEntity<Franquicia> addFranquicia(@RequestBody Map<String, String> request) {
         String nombre = request.get("nombre");
         return ResponseEntity.ok(franquiciaService.addFranquicia(nombre));
     }
 
-    @GetMapping
+    @GetMapping("/")
     public ResponseEntity<List<Franquicia>> obtenerFranquicias() {
         try {
             List<Franquicia> franquicias = franquiciaService.getAllFranquicias();
