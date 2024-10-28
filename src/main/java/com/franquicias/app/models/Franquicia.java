@@ -1,5 +1,6 @@
 package com.franquicias.app.models;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -18,11 +19,13 @@ public class Franquicia {
     @Column
     @Getter
     @Setter
+    @Schema(example = "string", description = "Nombre de la franquicia")
     private String nombre;
 
     @OneToMany(mappedBy = "franquicia", cascade = CascadeType.ALL)
     @Setter
     @Getter
+    @Schema(description = "Lista de sucursales de la franquicia")
     private List<Sucursal> sucursales;
 
 }
