@@ -1,6 +1,6 @@
 Demo prueba tecnica
 
-Api en spring boot
+Api en spring boot y mysql
 
 compilar en local
 
@@ -24,3 +24,6 @@ crea tres servicios
 - phpmyadmin (80)
 - springapp (8080)
 
+- Demo en aws con rds mysql
+
+http://apidemoaws.us-east-2.elasticbeanstalk.com/
