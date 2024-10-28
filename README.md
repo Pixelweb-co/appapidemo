@@ -24,6 +24,7 @@ crea tres servicios
 - phpmyadmin (80)
 - springapp (8080)
 
-- Demo en aws con rds mysql
+
+Demo en aws con rds mysql
 
 http://apidemoaws.us-east-2.elasticbeanstalk.com/
