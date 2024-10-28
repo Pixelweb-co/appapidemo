@@ -28,9 +28,10 @@ http://54.197.222.16:5000/swagger-ui/index.html
 Demo en aws con rds mysql y Elastic Beanstalk
 
 http://54.197.222.16:5000/api/franquicias/
+ 
 
+#Instalacion en Modo local .
 
-#Instalacion en Modo local
 
 Se crean 3 contenedores para e funcionamiento y pruebas de la app
 
