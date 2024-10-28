@@ -1,6 +1,6 @@
 ## Demo prueba tecnica
 
-# Api en spring boot (localhost) -  (aws Elastic Beanstalk) y mysql (aws RDS)
+# Api en spring boot (localhost) - EC2 y mysql (aws RDS)
 
 ## compilar en local
 
