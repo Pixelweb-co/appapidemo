@@ -25,7 +25,7 @@ http://localhost:5000/api/
 
 http://54.197.222.16:5000/swagger-ui/index.html
 
-## Demo en aws con rds mysql y Elastic Beanstalk
+## Demo en aws con rds mysql y EC2.
 
 http://54.197.222.16:5000/api/franquicias/
  
