@@ -15,15 +15,15 @@ java -jar /target/app-0.0.1-SNAPSHOT.jar
 -----------------------
 Api en aws: 
 
-http://3.88.55.138:5000/api
+http://54.197.222.16:5000/api
 
 Api en localhost
 http://localhost:5000/api/
 
 ----------------------
-Documentacion de la api: 
+Documentacion de la api:
 
-http://3.88.55.138:5000/swagger-ui/index.html
+http://54.197.222.16:5000/swagger-ui/index.html
 
 En docker
 
@@ -35,12 +35,12 @@ crea tres servicios
 
 - mysql database (3306)
 - phpmyadmin (80)
-- springapp (8080)
+- springapp (5000)
 
 
 Demo en aws con rds mysql y Elastic Beanstalk
 
-http://3.88.55.138:5000/api/franquicias/
+http://54.197.222.16:5000/api/franquicias/
 
 
 ## Endpoints
@@ -88,7 +88,7 @@ Respuesta Exitosa (Código 200):
 ## Ejemplos de Solicitud
 
 # Crear una Franquicia
-curl -X POST http://localhost:8080/api/franquicias/ -H "Content-Type: application/json" -d '{"nombre": "Mi Nueva Franquicia"}'
+curl -X POST http://localhost:5000/api/franquicias/ -H "Content-Type: application/json" -d '{"nombre": "Mi Nueva Franquicia"}'
 
 # Respuesta Exitosa:
 {
@@ -99,7 +99,7 @@ curl -X POST http://localhost:8080/api/franquicias/ -H "Content-Type: applicatio
 
 # Obtener todas las Franquicias
 
-curl -X GET http://localhost:8080/api/franquicias/ -H "Content-Type: application/json"
+curl -X GET http://localhost:5000/api/franquicias/ -H "Content-Type: application/json"
 
 # Respuesta Exitosa:
 
