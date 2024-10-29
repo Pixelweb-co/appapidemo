@@ -1,8 +1,8 @@
-## Demo prueba tecnica
+Demo prueba tecnica
 
-# Api en spring boot (localhost) - EC2 y mysql (aws RDS)
+Api en spring boot (localhost) -  (aws Elastic Beanstalk) y mysql (aws RDS)
 
-## compilar en local
+compilar en local
 
 En la raiz de el directorio escribe
 
@@ -13,39 +13,114 @@ y luego ejecuta el jar generado
 java -jar /target/app-0.0.1-SNAPSHOT.jar
 
 -----------------------
-## Api en aws: 
+Api en aws: 
 
-http://54.197.222.16:5000/api
+http://3.88.55.138:5000/api
 
-## Api en localhost
+Api en localhost
 http://localhost:5000/api/
 
 ----------------------
-## Documentacion de la api: 
+Documentacion de la api: 
 
-http://54.197.222.16:5000/swagger-ui/index.html
+http://3.88.55.138:5000/swagger-ui/index.html
 
-## Demo en aws con rds mysql y EC2.
+En docker
 
-http://54.197.222.16:5000/api/franquicias/
- 
+escribe en la consola:
 
-#Instalacion en Modo local .
+docker-compose up -d --build
 
-# Franquicias API
+crea tres servicios
 
-Esta API permite gestionar una lista de franquicias y sus sucursales. Proporciona endpoints para crear franquicias y listar todas las franquicias disponibles.
+- mysql database (3306)
+- phpmyadmin (80)
+- springapp (8080)
 
-## Tabla de Contenidos
-- [Instalación](#instalación)
-- [Endpoints](#endpoints)
-    - [Crear una Franquicia](#crear-una-franquicia)
-    - [Obtener todas las Franquicias](#obtener-todas-las-franquicias)
-- [Ejemplos de Solicitud](#ejemplos-de-solicitud)
 
-## Instalación
-1. Clona este repositorio.
-2. Asegúrate de tener Docker y Docker Compose instalados.
-3. Ejecuta el siguiente comando para levantar los contenedores:
-   ```bash
-   docker-compose up -d --build
+Demo en aws con rds mysql y Elastic Beanstalk
+
+http://3.88.55.138:5000/api/franquicias/
+
+
+## Endpoints
+
+# Crear una Franquicia
+URL: /api/franquicias/
+Método: POST
+Descripción: Crea una nueva franquicia con un nombre especificado.
+
+# Cuerpo de Solicitud (JSON):
+
+{
+  "nombre": "Nombre de la Franquicia"
+}
+
+# Respuesta Exitosa (Código 200):
+
+{
+  "id": 1,
+  "nombre": "Nombre de la Franquicia",
+  "sucursales": []
+}
+
+-----------------------------------------
+# Obtener todas las Franquicias
+
+URL: /api/franquicias/
+Método: GET
+Descripción: Obtiene una lista de todas las franquicias.
+Respuesta Exitosa (Código 200):
+
+[
+  {
+    "id": 1,
+    "nombre": "Nombre de la Franquicia",
+    "sucursales": []
+  },
+  {
+    "id": 2,
+    "nombre": "Otra Franquicia",
+    "sucursales": []
+  }
+]
+
+## Ejemplos de Solicitud
+
+# Crear una Franquicia
+curl -X POST http://localhost:8080/api/franquicias/ -H "Content-Type: application/json" -d '{"nombre": "Mi Nueva Franquicia"}'
+
+# Respuesta Exitosa:
+{
+  "id": 1,
+  "nombre": "Mi Nueva Franquicia",
+  "sucursales": []
+}
+
+# Obtener todas las Franquicias
+
+curl -X GET http://localhost:8080/api/franquicias/ -H "Content-Type: application/json"
+
+# Respuesta Exitosa:
+
+[
+  {
+    "id": 1,
+    "nombre": "Mi Nueva Franquicia",
+    "sucursales": []
+  },
+  {
+    "id": 2,
+    "nombre": "Otra Franquicia",
+    "sucursales": []
+  }
+]
+
+# Notas
+
+Asegúrate de que el servidor esté en ejecución en localhost:5000.
+Los datos de ejemplo pueden variar dependiendo de las franquicias añadidas.
+
+
+Este archivo README proporciona una guía clara para los usuarios de la API, detallando cómo realizar solicitudes y los formatos esperados en las respuestas.
+
