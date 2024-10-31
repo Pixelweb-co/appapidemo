@@ -15,7 +15,7 @@ java -jar /target/app-0.0.1-SNAPSHOT.jar
 -----------------------
 Api en aws: 
 
-http://54.197.222.16:5000/api
+http://18.217.163.183:5000/api
 
 Api en localhost
 http://localhost:5000/api/
@@ -23,7 +23,7 @@ http://localhost:5000/api/
 ----------------------
 Documentacion de la api:
 
-http://54.197.222.16:5000/swagger-ui/index.html
+http://18.217.163.183:5000/swagger-ui/index.html
 
 En docker
 
@@ -40,7 +40,7 @@ crea tres servicios
 
 Demo en aws con rds mysql y Elastic Beanstalk
 
-http://54.197.222.16:5000/api/franquicias/
+http://18.217.163.183:5000/api/franquicias/
 
 
 ## Endpoints
